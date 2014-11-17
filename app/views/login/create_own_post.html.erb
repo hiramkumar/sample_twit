@@ -1,0 +1,25 @@
+
+	<tr>
+	
+	<tr>
+		<th>User Name</th>
+		<th>Message</th>
+		<th>Posted Time</th>
+	</tr>
+			<% for user in @posts %>
+			<tr>
+				<th>
+
+					<%= user.user.user_name %>
+				</th>
+				<td>
+					<%= user.message %>
+				</td>
+				<td>
+					<%= user.created_at %>
+				</td>
+			</tr>
+			<% end %>
+
+
+</tr>

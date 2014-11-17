@@ -1,0 +1,24 @@
+<h1>Welcome to Sample Twit</h1>
+<%= form_tag(url_for(:controller => "login", :action => "check_user", :method => "get"))%>  
+<table>
+	<tr>
+		<th>
+			User Name
+		</th>
+		<td><%= text_field :user,:name  %>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Password
+		</th>
+		<td><%= password_field :user,:password  %>
+		</td>
+	</tr>
+</table>
+<div class="actions">
+    <%= submit_tag 'Submit' %>
+  </div>
+
+</br>
+<%= link_to 'New Person', '/login/create_user' %>

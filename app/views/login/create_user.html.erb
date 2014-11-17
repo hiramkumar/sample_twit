@@ -1,0 +1,41 @@
+<% form_tag(url_for(:controller => "login", :action => "create"),:method => :post) do %>  
+	<table>
+		<tr>
+			<th>
+				<%= label :user,:name %>
+			</th>
+			<td>
+				<%= text_field :user,:name %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= label :user,:user_name %>
+			</th>
+			<td>
+				<%= text_field :user,:user_name %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= label :user,:password %>
+			</th>
+			<td>
+				<%= password_field :user,:password %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= label :user,:password_confirmation %>
+			</th>
+			<td>
+				<%= password_field :user,:password_confirmation %>
+			</td>
+		</tr>
+	    <br>
+	</table>
+	</br>
+    <div >
+    	<%= submit_tag 'Submit' %>
+    </div>
+<% end %>

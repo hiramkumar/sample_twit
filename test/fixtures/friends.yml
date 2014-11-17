@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  my_id: 1
+  friend_id: 1
+  type: MyString
+
+two:
+  my_id: 1
+  friend_id: 1
+  type: MyString

@@ -1,0 +1,47 @@
+<h1>List of My Post</h1>
+<%= link_to 'Friend Posts', {:controller => 'login',:action => 'show_all'} %>
+<table>
+	<tr>
+		<td>
+			<fieldset>
+				<legend>
+					Messages
+				</legend>
+				<div>
+						<%= text_area_tag 'post', nil, :maxlength => 160,:size => '75x5' %>
+						<%= check_box_tag 'post_public', 'yes', true %> is Public
+						<%= submit_tag 'Submit', :onclick => 'add_post();' %>
+				</div>				
+			</fieldset> 
+		</td>
+	</tr>
+	</table>
+	<table id = 'update_post'>
+		<tr>
+			<th>User Name</th>
+			<th>Message</th>
+			<th>Posted Time</th>
+		</tr>
+			<% for user in @posts %>
+				<tr>
+					<td>
+
+						<%= user.user.user_name %>
+					</td>
+					<td>
+						<%= user.message %>
+					</td>
+					<td>
+						<%= user.created_at %>
+					</td>
+				</tr>
+			<% end %>
+	</table>
+<script>
+function add_post()
+{
+	var pars = "post="+$F('post') + "&checked=" + $F("post_public");
+	var myAjax = new Ajax.Updater("update_post", '/login/create_own_post',{parameters:pars,method:'get'})
+
+}
+</script>

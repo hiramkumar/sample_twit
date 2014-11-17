@@ -1,0 +1,23 @@
+<h1>List of Users</h1>
+<%= link_to 'My Post', {:controller => 'login',:action => 'own_post'} %>
+<table>
+	<tr>
+		<th>
+			Name
+		</th>
+		<th>
+			Action
+		</th>
+	</tr>
+	<% for user in @users%>
+	<tr>
+		<th>
+			<%= user.user_name %>
+		</th>
+		<td>
+			<%= link_to 'Follow', {:controller => 'login',:action => 'create_follow',:user_id => user.id} %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+</br>

@@ -1,0 +1,40 @@
+div#body {
+background-color: #8C8C8C;
+font-family:"Comic Sans MS", cursive, sans-serif;
+font-size: 12px;
+}
+div#header {
+background: -webkit-radial-gradient(#333300,#191919); /* For Safari */
+background: -o-radial-gradient(#333300,#191919); /* For Opera 11.1 to 12.0 */
+background: -moz-radial-gradient(#333300,#191919); /* For Fx 3.6 to 15 */
+background: radial-gradient(#333300,#191919); /* Standard syntax (must be last) */
+padding-top: 25px;
+padding-bottom: 25px;
+font-family:"Comic Sans MS", cursive, sans-serif;
+font-size: 40px;
+font-weight:bold;
+color: #FFFFFF ;
+text-align: center;
+}
+.link {
+    color: #3C3B37;
+} 
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    text-align: left  
+
+}
+td {
+	font-size: 10px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	text-align: left 
+
+}
+div#footer {
+
+clear:both;border-top:1px solid #850505 !important; width:100%; ;font-size:1.2em;text-align: center;
+opacity:0.4;
+filter:alpha(opacity=40);
+}
